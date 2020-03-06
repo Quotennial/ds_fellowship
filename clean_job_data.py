@@ -34,3 +34,5 @@ def job_data_w_geog():
 
 if __name__ == "__main__":
     print(job_data_w_geog().head())
+
+    #TODO Geoparse the companies?

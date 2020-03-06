@@ -14,11 +14,22 @@ class Essex_Shape_Config():
 class Web_Scrape_Config():
     root_folder = "web_data"
     OUTPUT_COLS = ['search_area','job_title', 'pay', 'pay_freq', 'company', "job_location", "desc"]
-    SCRAPE_OUTPUT_PATH = f"{root_folder}/scrape_dump.csv"
+    SCRAPE_OUTPUT_PATH = f"{root_folder}/job_scrape_dump.csv"
     NUM_PAGES = 2000 #these need to be in units of 10, i think can go up to 2000?
     JOB_DATA_HEADERS = ["search_term", "job_title", "wage", "wage_freq", "company", "location", "desc"]
 
 
 
+class Zoopla_Config():
+    base_url = "http://api.zoopla.co.uk/api/v1/property_listings.json"
+    key = "uq7h43avuhm3g95tf2e634ae"
+    # key = "wft89y7dtrr9q9byrsjs32cz"
+    area = "Essex"
+    summarised= "True"
+    include_rented = 1
+    include_sold = 1
+    page_size = 100
+    page_num = 1
+    params = {"api_key": key, "area": area, "summarised":summarised,  "include_rented": include_rented, "include_sold": include_sold, "page_size":page_size, "page_num":page_num}
 
-
+    output_add = "web_data/zoopla_dump.csv"
