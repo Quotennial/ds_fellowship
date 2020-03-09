@@ -22,7 +22,7 @@ class Web_Scrape_Config():
 
 class Zoopla_Config():
     base_url = "http://api.zoopla.co.uk/api/v1/property_listings.json"
-    key = "uq7h43avuhm3g95tf2e634ae"
+    key = "u5sevpae3gdup7ft7jjvkppp"
     # key = "wft89y7dtrr9q9byrsjs32cz"
     area = "Essex"
     summarised= "True"
@@ -30,6 +30,7 @@ class Zoopla_Config():
     include_sold = 1
     page_size = 100
     page_num = 1
-    params = {"api_key": key, "area": area, "summarised":summarised,  "include_rented": include_rented, "include_sold": include_sold, "page_size":page_size, "page_num":page_num}
+    params = {"api_key": key, "area": area, "summarised":summarised,  "include_rented": include_rented, 
+    "include_sold": include_sold, "page_size":page_size, "page_num":page_num, "include_rented": include_rented}
 
     output_add = "web_data/zoopla_dump.csv"
