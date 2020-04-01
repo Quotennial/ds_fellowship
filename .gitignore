@@ -6,3 +6,4 @@ output
 geog_files
 venv_socio
 .DS_Store
+.env
