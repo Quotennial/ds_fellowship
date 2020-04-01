@@ -19,20 +19,12 @@ def add_shapes(df):
     merge_gdf = gpd.GeoDataFrame(merge_df)
     return merge_gdf
 
-
-
-
-
 def job_data_w_geog():
+    """Fucntion used to return the cleaned job data"""
     job_data = get_job_data()
     merged_gdf = add_shapes(job_data)
-
-
     return(merged_gdf)
-
-
 
 if __name__ == "__main__":
     print(job_data_w_geog().head())
-
     #TODO Geoparse the companies?

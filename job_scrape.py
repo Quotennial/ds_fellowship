@@ -21,6 +21,7 @@ def clean_salary(salary_text:str):
 
 
 def scrape_pages(url:str, region:str):
+    """Scrapes the indeed website with the region as a search term"""
     page_collect = []
     page = requests.get(url)
     soup = BeautifulSoup(page.text, 'html.parser')
@@ -36,7 +37,8 @@ def scrape_pages(url:str, region:str):
         job_title_obj = job.find("a", {"class": "jobtitle turnstileLink"}).get_text() #Job title by a id
         job_collect.append(job_title_obj.replace('\n', '').replace('  ', ''))
 
-        try:
+
+        try: 
             salary_obj = job.find("span", {"class": "salaryText"}).get_text() #search by a id
             salary_info = clean_salary(salary_obj)
             job_collect.append(salary_info[0]) # salary amount
@@ -78,6 +80,8 @@ def scrape_pages(url:str, region:str):
 
 
 def crawl_pages():
+    """Uses the regions dict to crawl through the regions ins essex
+    Appends the datafram to a csv file"""
     regions_df = get_essex_output_area() #call geog import function
     regions_arr = regions_df.LAD15NM_x.values #get list of LAU
 
