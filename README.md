@@ -27,7 +27,7 @@ Then install requirements
 pip install -r requirements.txt
 ```
 
-![Essex DSF-5](Essex DSF-5.jpg)
+![Essex DSF-5](EssexDSF_arch.jpg)
 
 The `clean_job_data.py` file has a function `job_data_w_geog`which will start the scraping process (if no existing file) and return the results with geographic information
 
