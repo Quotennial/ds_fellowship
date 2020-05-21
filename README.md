@@ -35,4 +35,6 @@ The `zoopla.py` file has a function `get_prop_ap` which will either call the api
 
 ## Visualisation
 
+Quickest way to get the project started is running the `geography_explore.ipynb` notebook. Which will use the importers. 
+
 Visualisation is done in a python notebook, some descriptive statistics using mapltot lib and a more interactive map utilising [kepler.gl](https://kepler.gl/) mapping tool.
